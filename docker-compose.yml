@@ -3,7 +3,6 @@ version: "3.8"
 services:
   mongo:
     image: mongo:6
-    container_name: mongo
     restart: always
     ports:
       - "27017:27017"
@@ -13,8 +12,7 @@ services:
       - app-network
 
   backend:
-    build: ./backend
-    container_name: backend
+    image: syam32/backend:latest
     restart: always
     ports:
       - "5000:5000"
@@ -26,8 +24,7 @@ services:
       - app-network
 
   frontend:
-    build: ./frontend
-    container_name: frontend
+    image: syam32/frontend:latest
     restart: always
     ports:
       - "3000:80"
