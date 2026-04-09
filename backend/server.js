@@ -7,7 +7,13 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors());
+const corsOptions = {
+  origin: "http://51.20.68.160",   // frontend origin
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Routes

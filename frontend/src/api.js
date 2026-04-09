@@ -1,5 +1,4 @@
-const API_URL = (process.env.REACT_APP_API_URL || "http://51.20.68.160:5000/api").replace(/\/$/, "");
-
+const API_URL = "http://51.20.68.160:5000/api";
 async function request(path, options = {}) {
   const response = await fetch(`${API_URL}${path}`, {
     headers: {
