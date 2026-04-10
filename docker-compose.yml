@@ -27,7 +27,7 @@ services:
     image: syam32/frontend:latest
     restart: always
     ports:
-      - "3000:80"
+      - "80:80"
     depends_on:
       - backend
     networks:
